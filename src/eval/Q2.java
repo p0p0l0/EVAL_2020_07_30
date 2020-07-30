@@ -35,11 +35,11 @@ public class Q2 {
     public static boolean estPalindrome(String string) {
         int n = string.length();
         for (int i = 0; i < n / 2; i++) {
-            if (string.charAt(i) == string.charAt(n - i - 1)) {
-                return true;
+            if (string.charAt(i) != string.charAt(n - i - 1)) {
+                return false;
             }
         }
-        return false;
+        return true;
     }
 
     public static String[] getTab(int n) {
