@@ -29,20 +29,19 @@ public class Q1 {
         System.out.println("Saisir une valeur a chercher");
         n = reader.nextInt();
 
-        System.out.println("Pour la valeur " + n + " la fonction retourne " + nbOccurences(tab, n));
+        System.out.printf("Pour la valeur %d la fonction retourne %d\n", n, nbOccurences(tab, n));
 
         //tableau a 2 dimensions
-        System.out.println("Saisir le nombre de ligne du tableau");
+        System.out.println("\nSaisir le nombre de ligne du tableau");
         nli = reader.nextInt();
         System.out.println("Saisir le nombre de col du tableau");
         ncol = reader.nextInt();
 
+        int[][] tab2 = getTab(nli, ncol);
+        
         System.out.println("Saisir une valeur a chercher");
         n = reader.nextInt();
-
-        int[][] tab2 = getTab(nli, ncol);
-
-        System.out.println("Pour la valeur " + n + " la fonction retourne " + n + " la fonction retourne " + nbOccurences(tab2, n));
+        System.out.printf("Pour la valeur %d la fonction retourne %d\n", n, nbOccurences(tab2, n));
     }
 
     public static int[] getTab(int nli) {
@@ -101,4 +100,5 @@ public class Q1 {
         return somme;
 
     }
+    
 }
